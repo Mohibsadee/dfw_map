@@ -174,7 +174,7 @@ app.get("/api/districts", (req, res) => {
 // 4️⃣ Get precincts by filters - MAIN MAP ENDPOINT
 app.get("/api/precincts", (req, res) => {
   const { county, jurisdiction, district } = req.query;
-  
+
   let query = "SELECT pctkey, county, jurisdiction, district, geometry FROM precincts WHERE 1=1";
   let params = [];
 
